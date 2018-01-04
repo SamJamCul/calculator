@@ -1,0 +1,28 @@
+.container {
+  height: 500px;
+  width: 325px;
+  position: absolute;
+  top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow: -20px 20px 10px #888888;
+  background-color: #8f96ef;
+}
+
+.display {
+    height: 60px;
+    width: 300px;
+    position: relative;
+    margin: auto;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+    text-align: right;
+    left: 0;
+    right: 0;
+    background-color: #b3c3b2;
+    border-radius: 5px;
+  }
