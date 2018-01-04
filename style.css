@@ -14,15 +14,26 @@
 }
 
 .display {
-    height: 60px;
-    width: 300px;
-    position: relative;
+    width: 90%;
+    height: 8%;
     margin: auto;
-    margin-top: 12.5px;
-    margin-bottom: 12.5px;
+    margin-top: 10px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
     text-align: right;
     left: 0;
     right: 0;
     background-color: #b3c3b2;
     border-radius: 5px;
+    font-size: 30px;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    display: grid;
+    padding: 10px 10px 10px 10px;
+    height: 79%;
   }
