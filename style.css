@@ -28,6 +28,7 @@
     background-color: #b3c3b2;
     border-radius: 5px;
     font-size: 30px;
+    box-shadow: 2px -2px;
   }
 
   .buttons {
@@ -36,4 +37,34 @@
     display: grid;
     padding: 10px 10px 10px 10px;
     height: 79%;
+  }
+
+  .button {
+    border-width: 0;
+    box-shadow: -2px 2px;
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    background-color: #b1b1ce;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    border-color: black;
+    font-family: sans-serif;
+  }
+
+  #solar {
+    grid-column: 1 / span 2;
+    border-radius: 10px;
+    height: 60px;
+    width: 130px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: grey;
+    box-shadow: 2px -2px;
   }

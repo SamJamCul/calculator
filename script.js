@@ -17,3 +17,6 @@ function divide(a, b) {
 function operate(o, a, b) {
   return o(a, b);
 }
+
+const
+let answer = 0;
