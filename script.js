@@ -34,15 +34,19 @@ function equal() {
   if (display.hasChildNodes()) {
     display.removeChild(display.childNodes[0]);
   }
-  if(operation !== ''){
+  if (secondnum === '0' && operation === 'divide') {
+    display.textContent = "ERROR/0"
+    operation = firstnum = secondnum = answer = '';
+  } else if(operation !== ''){
     if(secondnum !== ''){
       answer = operate(eval(operation), firstnum, secondnum)
       display.textContent = answer;
+      firstnum = answer;
     }
+  } else if(operation === '') {
+    answer = firstnum
+    display.textContent = answer;
   }
-  operation = secondnum = '';
-  firstnum = answer;
-  display.textContent = answer;
 }
 
 numbers.forEach((button) => {
@@ -50,9 +54,14 @@ numbers.forEach((button) => {
     if (display.hasChildNodes()) {
       display.removeChild(display.childNodes[0]);
     }
-    if(operation === '' && answer === ''){
-      firstnum += button.textContent
-      display.textContent = firstnum;
+    if(operation === '' && answer === '') {
+      if (firstnum.indexOf('.') !== -1 && button.textContent === '.') {
+          display.textContent = firstnum
+          void 0
+      } else {
+        firstnum += button.textContent
+        display.textContent = firstnum;
+      }
     } else if (operation === ''){
       if (display.hasChildNodes()) {
         display.removeChild(display.childNodes[0]);
@@ -61,8 +70,13 @@ numbers.forEach((button) => {
       firstnum += button.textContent
       display.textContent = firstnum;
     } else if(operation !== '') {
-      secondnum += button.textContent
-      display.textContent = secondnum;
+      if (secondnum.indexOf('.') !== -1 && button.textContent === '.') {
+          display.textContent = secondnum
+          void 0
+      } else {
+        secondnum += button.textContent
+        display.textContent = secondnum;
+      }
     }
   })
 })
