@@ -69,6 +69,11 @@ numbers.forEach((button) => {
       answer = firstnum = ''
       firstnum += button.textContent
       display.textContent = firstnum;
+    } else if(operation !== '' && secondnum !== '' && answer !== '') {
+      secondnum = ''
+      answer = ''
+      secondnum += button.textContent
+      display.textContent = secondnum;
     } else if(operation !== '') {
       if (secondnum.indexOf('.') !== -1 && button.textContent === '.') {
           display.textContent = secondnum
