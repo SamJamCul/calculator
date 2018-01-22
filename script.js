@@ -100,6 +100,7 @@ operations.forEach((button => {
     } else if (secondnum !== '') {
       equal()
       operation = button.id
+      display.textContent += button.textContent
     }
   })
 }))
