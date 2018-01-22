@@ -94,6 +94,8 @@ cancel.addEventListener('click', function(){
   if (secondnum !== '') {
     secondnum = secondnum.slice(0, -1)
     display.textContent = secondnum
+  } else if (answer !== '') {
+    return
   } else if (firstnum !== '') {
     firstnum = firstnum.slice(0, -1)
     display.textContent = firstnum
