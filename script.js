@@ -27,7 +27,12 @@ function divide(a, b) {
 }
 
 function operate(o, a, b) {
-  return o(a, b);
+  here = o(a, b)
+  if (here.toString().length > 12) {
+    return 'ERROR2BIG'
+  } else {
+    return here
+  };
 }
 
 function equal() {
@@ -40,8 +45,13 @@ function equal() {
   } else if(operation !== ''){
     if(secondnum !== ''){
       answer = operate(eval(operation), firstnum, secondnum)
+      if(answer === "ERROR2BIG") {
+        display.textContent = answer;
+        operation = firstnum = secondnum = answer = '';
+      } else {
       display.textContent = answer;
       firstnum = answer;
+    }
     }
   } else if(operation === '') {
     answer = firstnum
@@ -59,7 +69,9 @@ numbers.forEach((button) => {
           display.textContent = firstnum
           void 0
       } else {
-        firstnum += button.textContent
+        if (firstnum.length < 12) {
+          firstnum += button.textContent
+        }
         display.textContent = firstnum;
       }
     } else if (operation === ''){
@@ -67,19 +79,25 @@ numbers.forEach((button) => {
         display.removeChild(display.childNodes[0]);
       }
       answer = firstnum = ''
-      firstnum += button.textContent
+      if (firstnum.length < 12) {
+        firstnum += button.textContent
+      }
       display.textContent = firstnum;
     } else if(operation !== '' && secondnum !== '' && answer !== '') {
       secondnum = ''
       answer = ''
-      secondnum += button.textContent
+      if (secondnum.length < 12) {
+        secondnum += button.textContent
+      }
       display.textContent = secondnum;
     } else if(operation !== '') {
       if (secondnum.indexOf('.') !== -1 && button.textContent === '.') {
           display.textContent = secondnum
           void 0
       } else {
-        secondnum += button.textContent
+        if (secondnum.length < 12) {
+          secondnum += button.textContent
+        }
         display.textContent = secondnum;
       }
     }
