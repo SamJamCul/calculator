@@ -31,7 +31,7 @@
     box-shadow: 2px -2px;
   }
 
-  .buttons {
+.buttons {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     display: grid;
@@ -39,7 +39,7 @@
     height: 79%;
   }
 
-  .button {
+.button {
     border-width: 0;
     box-shadow: -2px 2px;
     height: 60px;
@@ -57,7 +57,61 @@
     font-family: sans-serif;
   }
 
-  #solar {
+  .opebut {
+      border-width: 0;
+      box-shadow: -2px 2px;
+      height: 60px;
+      width: 60px;
+      margin: auto;
+      left: 0;
+      right: 0;
+      border-radius: 10px;
+      background-color: #b1b1ce;
+      line-height: 60px;
+      text-align: center;
+      font-size: 30px;
+      color: black;
+      border-color: black;
+      font-family: sans-serif;
+    }
+
+    .equals {
+        border-width: 0;
+        box-shadow: -2px 2px;
+        height: 60px;
+        width: 60px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        border-radius: 10px;
+        background-color: #b1b1ce;
+        line-height: 60px;
+        text-align: center;
+        font-size: 30px;
+        color: black;
+        border-color: black;
+        font-family: sans-serif;
+      }
+
+.metabut {
+  border-width: 0;
+  box-shadow: -2px 2px;
+  height: 60px;
+          width: 60px;
+          margin: auto;
+          left: 0;
+          right: 0;
+          border-radius: 10px;
+          background-color: #b1b1ce;
+          line-height: 60px;
+          text-align: center;
+          font-size: 30px;
+          color: black;
+          border-color: black;
+          font-family: sans-serif;
+        }
+
+#solar {
     grid-column: 1 / span 2;
     border-radius: 10px;
     height: 60px;
