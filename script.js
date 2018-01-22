@@ -90,6 +90,13 @@ operations.forEach((button => {
   button.addEventListener('click', (e) => {
     if(secondnum === '') {
       operation = button.id
+      if (display.textContent.indexOf('+') !== -1 ||
+          display.textContent.indexOf('-') !== -1 ||
+          display.textContent.indexOf('x') !== -1 ||
+          display.textContent.indexOf('÷') !== -1) {
+          display.textContent = display.textContent.slice(0, -1)
+      }
+      display.textContent += button.textContent
     } else if (secondnum !== '') {
       equal()
       operation = button.id
